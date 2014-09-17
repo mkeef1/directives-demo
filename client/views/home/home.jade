@@ -1,3 +1,9 @@
 h3 Home
 
 div(ng-repeat='person in people', mk-greeting, name='{{person.name}}', age='{{person.age}}')
+
+div(mk-clock, frequency='2000')
+div(mk-clock, frequency='1000')
+div(mk-clock, frequency='500')
+div(mk-clock, frequency='250')
+div(mk-clock, frequency='10')
