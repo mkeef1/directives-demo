@@ -2,14 +2,8 @@
   'use strict';
 
   angular.module('dir-demo')
-  .controller('HomeCtrl', ['$scope', '$interval', 'Home', function($scope, $interval, Home){
-    Home.getMessage().then(function(response){
-      $scope.mean = response.data.mean;
-
-      $interval(function(){
-        $scope.mean = _.shuffle($scope.mean);
-      }, 500);
-    });
+  .controller('HomeCtrl', ['$scope', 'Home', function($scope, Home){
+    $scope.people = [{name:'Bob', age:'25'}, {name:'Matt', age:'30'}];
   }]);
 })();
 
