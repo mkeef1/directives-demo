@@ -2,8 +2,10 @@ h3 Home
 
 div(ng-repeat='person in people', mk-greeting, name='{{person.name}}', age='{{person.age}}')
 
-div(mk-clock, frequency='2000')
 div(mk-clock, frequency='1000')
-div(mk-clock, frequency='500')
-div(mk-clock, frequency='250')
-div(mk-clock, frequency='10')
+
+div(mk-stock, ng-repeat='symbol in symbols', symbol='{{symbol}}')
+
+div(mk-weather, ng-repeat='zip in zips', zip='{{zip}}')
+
+div(ng-src='{{id}}', mk-movie, id='770672122')
