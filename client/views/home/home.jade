@@ -1,5 +1,12 @@
 h3 Home
 
+input(type='text', ng-model='title')
+button(ng-click='addMovie()') Add Movie
+
+div
+
+div(mk-movie, ng-repeat='title in titles', title='{{title}}', remove='delMovie($index)')
+
 div(ng-repeat='person in people', mk-greeting, name='{{person.name}}', age='{{person.age}}')
 
 div(mk-clock, frequency='1000')
@@ -8,4 +15,3 @@ div(mk-stock, ng-repeat='symbol in symbols', symbol='{{symbol}}')
 
 div(mk-weather, ng-repeat='zip in zips', zip='{{zip}}')
 
-div(ng-src='{{id}}', mk-movie, id='770672122')
