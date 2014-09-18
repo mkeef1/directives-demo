@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('dir-demo', ['ngRoute', 'LocalForageModule', 'mkGreetingModule', 'mkClockModule', 'mkStockModule', 'mkWeatherModule', 'mkMovieModule'])
+  angular.module('dir-demo', ['ngRoute', 'LocalForageModule', 'mkGreetingModule', 'mkClockModule', 'mkStockModule', 'mkWeatherModule', 'mkMovieModule', 'mkLocateModule'])
   .config(['$routeProvider', '$httpProvider', '$localForageProvider', function($routeProvider, $httpProvider, $localForageProvider){
     $routeProvider
     .when('/', {templateUrl:'/views/home/home.html', controller:'HomeCtrl'})
